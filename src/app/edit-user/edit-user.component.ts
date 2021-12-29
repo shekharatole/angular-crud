@@ -68,6 +68,7 @@ export class EditUserComponent implements OnInit {
       this.user = data;
     });
     // this.userFormGroup.reset();
+    this.router.navigate(['/users-list']);
   }
 
   onChangeStatus(status) {
