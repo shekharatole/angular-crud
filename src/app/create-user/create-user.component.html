@@ -1,0 +1,26 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Add User</h2>
+  <form [formGroup]="userFormGroup" (ngSubmit)="addUser()">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input formControlName="fname" placeholder="First Name" name="fname" class="form-control" id="fname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input formControlName="lname" placeholder="Last name" name="lname" class="form-control" id="lname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email" placeholder="email" name="email" class="form-control" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="mobile">Mobile:</label>
+      <input type="number" formControlName="mobile" placeholder="mobile" name="mobile" class="form-control" id="mobile" required>
+    </div>
+
+    <button class="btn btn-success" [disabled]="!userFormGroup.valid">Add</button>
+  </form>
+</div>
